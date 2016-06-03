@@ -1,3 +1,5 @@
+**Note** This is a WIP and not working correctly yet, do not use and expect much.
+
 # can-register-element
 
 Registers all CanJS Components with the native Web Component API. This means you can put your components directly in the template:
