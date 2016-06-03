@@ -20,6 +20,8 @@ Simply import can-register-element any where in your app (typically in your main
 import 'can-register-element';
 ```
 
+All Components (including those already created) will be registered as Web Components.
+
 ## License
 
 BSD 2 Clause
