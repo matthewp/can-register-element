@@ -3,6 +3,7 @@ var register = require("../register");
 var Component = require("can-component");
 var isEmptyObject = require("can-util/js/is-empty-object/is-empty-object");
 var callbacks = require("can-view-callbacks");
+var stache = require("can-stache");
 
 function randomTag(base){
 	var chars = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
@@ -20,6 +21,7 @@ function removeTags(){
 QUnit.module("can-register-element", {
 	afterEach: function(){
 		removeTags();
+		document.getElementById("qunit-test-area").innerHTML = "";
 	}
 });
 
@@ -47,5 +49,27 @@ QUnit.test("registers Components created after", function(assert){
 	});
 
 	assert.ok(registration.tags[tag], "tag is not registered");
+	registration.unregister();
+});
+
+QUnit.test("Component's callback is only called once", function(assert){
+	var registration = register();
+
+	var times = 0;
+	var tag = randomTag("once");
+
+	Component.extend({
+		tag: tag,
+		events: {
+			init: function(){
+				times++;
+			}
+		}
+	});
+
+	var frag = stache("<" + tag + "/>")();
+	document.getElementById("qunit-test-area").appendChild(frag);
+
+	assert.equal(times, 1, "callback only called once");
 	registration.unregister();
 });
