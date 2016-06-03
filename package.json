@@ -1,0 +1,45 @@
+{
+  "name": "can-register-element",
+  "version": "0.0.1",
+  "description": "Register can Components with registerElement",
+  "main": "index.js",
+  "scripts": {
+    "build": "steal-tools export --standalone --amd",
+    "test": "testee test/test.html --browsers chrome",
+    "develop": "done-serve --static --develop --port 8080"
+  },
+  "keywords": [
+    "canjs",
+    "canjs-plugin",
+    "donejs"
+  ],
+  "author": "Matthew Phillips",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "can-util": "^3.0.0-pre.26",
+    "can-view-callbacks": "^3.0.0-pre.3",
+    "can-view-scope": "^3.0.0-pre.6"
+  },
+  "devDependencies": {
+    "can-component": "^3.0.0-pre.9",
+    "can-stache": "^3.0.0-pre.7",
+    "steal": "^0.16.19",
+    "steal-qunit": "^0.1.1",
+    "steal-tools": "^0.16.4",
+    "testee": "^0.2.5"
+  },
+  "system": {
+    "npmAlgorithm": "flat"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewp/can-register-element.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matthewp/can-register-element/issues"
+  },
+  "homepage": "https://github.com/matthewp/can-register-element#readme"
+}

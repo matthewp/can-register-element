@@ -1,0 +1,12 @@
+<demo-app></demo-app>
+
+<script src="node_modules/steal/steal.js">
+  var Component = require("can-component");
+  var stache = require("can-stache");
+
+  Component.extend({
+    tag: "demo-app",
+    template: stache("<strong>Hello world!</strong>"),
+    viewModel: {}
+  });
+</script>
