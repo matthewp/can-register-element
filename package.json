@@ -1,6 +1,6 @@
 {
   "name": "can-register-element",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Register can Components with registerElement",
   "main": "index.js",
   "scripts": {
