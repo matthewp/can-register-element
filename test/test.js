@@ -52,7 +52,7 @@ QUnit.test("registers Components created after", function(assert){
 	registration.unregister();
 });
 
-QUnit.test("Component's callback is only called once", function(assert){
+QUnit.test("Component's init is only called once", function(assert){
 	var registration = register();
 
 	var times = 0;
